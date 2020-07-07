@@ -13,6 +13,7 @@
 #define VENTA
 
 #include <string>
+#include <iostream>
 #include "fecha.h"
 using namespace std;
 

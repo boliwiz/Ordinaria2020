@@ -15,6 +15,7 @@
 #include "cliente.h" 
 
 #include <string>
+#include <iostream>
 using namespace std;
 
 
@@ -76,6 +77,10 @@ public:
 	int GeneraIdCliente (void) const; 
 
 	/***********************************************************************/
+
+	// Constructor por fichero
+	// Operador <<
+	// Operador >>
 
 private:
 

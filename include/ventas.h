@@ -15,6 +15,7 @@
 #include "venta.h"
 
 #include <string>
+#include <iostream>
 using namespace std;
 
 
@@ -62,6 +63,11 @@ public:
 	friend istream & operator >> (istream & in, Ventas & ventas);
 
 	/***********************************************************************/
+
+	// venta media
+	// operador >
+	// operador ==
+
 };
 
 /////////////////////////////////////////////////////////////////////////////
