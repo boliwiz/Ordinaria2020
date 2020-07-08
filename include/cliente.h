@@ -34,21 +34,26 @@ public:
 	// Constructor sin argumentos
 	// Necesario puesto que el constructor sin argumentos de la coleccion
 	// usa este constructor para cada elemento de la coleccion.
+	// Y evitar comportamiento ambiguo.
 
-	Cliente (void); 
+	Cliente (){
+		id_cliente = 0;
+		descuento = 0;
+		nombre = "";
+		NIF = "";
+	} 
 	
-	// No es necesario implementar el destructor, puesto que no usamos 
-	// el operador new para crear el objeto dinamicamente.
-	// ~Cliente (void); 
-
 	/***********************************************************************/
 	// Constructor con argumentos
 
 	Cliente (string el_NIF, double el_descuento, 
 		     string el_nombre, int el_id_cliente=0); 
 
-
 	// No son necesarios el constructor copia, ni el operador de asignacion
+
+	// No es necesario implementar el destructor, puesto que no usamos 
+	// el operador new para crear el objeto dinamicamente.
+	// ~Cliente (void); 
 
 	/***********************************************************************/
 	// Método de escritura: modifica el "id_cliente"
@@ -84,6 +89,15 @@ public:
 	// Operador >> Extrae un "Cliente" de un flujo de texto. 
 
 	friend istream & operator >> (istream & in, Cliente & un_cliente);
+
+	/***********************************************************************/
+	// Operador asignacion =
+	void operator =(const Cliente &otro);
+
+
+
+	// Operador ==
+	bool operator ==(const Cliente & otro);
 
 	/***********************************************************************/
 

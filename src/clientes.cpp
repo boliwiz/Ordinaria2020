@@ -1,5 +1,7 @@
 #include <iostream>
+#include <fstream>
 
+#include "cliente.h"
 #include "clientes.h"
 
 using namespace std;
